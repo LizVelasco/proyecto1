@@ -12,7 +12,6 @@ import terror from '../images/terror-01.png';
 import romance from '../images/romance-01.png';
 import humor from '../images/humor-01.png';
 import poesia from '../images/poesia-01.png';
-import { Height } from "@mui/icons-material";
 
 export default function Carrusel(){
 	const datatipolibro =[
@@ -71,7 +70,7 @@ export default function Carrusel(){
 	};
 	
 	return (
-    <div className="container">
+    <div className="containerCarrusel">
 			<h2>Busca tu libro por género</h2>
 			<Slider {...settings}>
         {datatipolibro.map((item)=>

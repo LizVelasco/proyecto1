@@ -1,6 +1,7 @@
 import React from 'react'
-import { Box, Divider, Stack, Grid, Container, styled, Typography, ButtonBase} from '@mui/material'
+import {Grid, styled, Typography, ButtonBase} from '@mui/material'
 import Footer from '../components/footer';
+import '../styles/terror.css'
 
 import terror1 from '../images/terror1.jpeg';
 import terror2 from '../images/terror2.jpeg';
@@ -36,7 +37,7 @@ function Terror() {
 	const librosTerror=[
 		{id:'1', title: 'Asylum', author:'Madeleine Roux', tapa:'Tapa Blanda, Nuevo', precio:'$86.064', img:terror1},
 		{id:'2', title: 'Cierra todas las puertas', author:'Riley Sager', tapa:'Tapa Dura, Nuevo', precio:'$102.450', img: terror2},
-		{id:'3', title: 'En las montañas de la locura', author:'H.P Lovecraft', tapa:'Tapa Blanda, Nuevo', precio:'$74.760', img: terror3},
+		{id:'3', title: 'Montañas de la locura', author:'H.P Lovecraft', tapa:'Tapa Blanda, Nuevo', precio:'$74.760', img: terror3},
 		{id:'4', title: 'El segundo asesino', author:'Sarah Pinborough', tapa:'Tapa Dura, Nuevo', precio:'$57.890', img:terror4},
 		{id:'5', title: 'Julia', author:'Peter Straub', tapa:'Tapa Blanda, Usado', precio:'$89.990', img: terror5},
 		{id:'6', title: 'El apartamento olvidado', author:'S.L Grey', tapa:'Tapa Blanda, Nuevo', precio:'$54.800', img: terror6},
@@ -56,13 +57,13 @@ function Terror() {
 			<div className='terror'>
 			<h2>Tus nuevos libros favoritos de terror</h2>
 			</div>
-			<Grid container spacing={{ xs: 1, md: 2 }} columns={{ xs: 4, sm: 8, md: 12 }} padding={10}>
+			<Grid container spacing={{ xs: 1, md: 2 }} columns={{ xs: 1, sm: 8, md: 12 }} padding={10}>
 			{librosTerror.map((item) => (
 				<Grid item xs={2} sm={4} md={4} key={item.id} direction='column' paddingBottom={5}>
 					<Grid item>
 						<Img src={item.img} alt={item.id}/>
 					</Grid>
-					<Grid item xs={2} sm={4} md={4} key={item.title} paddingLeft={10} paddingTop={2}>
+					<Grid item xs={2} sm={4} md={4} key={item.title} paddingLeft={10} paddingTop={2} className='letras'>
 						<Typography gutterBottom variant="subtitle1" component="div">
 							{item.title}
 						</Typography>
@@ -73,7 +74,7 @@ function Terror() {
 							{item.tapa}
 						</Typography>
 					</Grid>
-					<Grid item paddingLeft={'10rem'} paddingTop={2}>
+					<Grid item paddingLeft={'10rem'} paddingTop={2} className='precio'>
 						<Typography variant='subtitle1' component='div'>
 							{item.precio}
 						</Typography>

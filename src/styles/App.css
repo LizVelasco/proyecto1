@@ -62,4 +62,29 @@
     padding-top: 5rem;
 }
 
+@media (max-width:400px){
+    .carrusel h2{
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .top a{
+        font-size: 1rem;
+    }
+
+    .carousel-indicators{
+        padding-top: 20px;
+    }
+
+    .slider-controler{
+        padding-top: 8rem;
+    }
+
+    .slider-arrow{
+        size: 6rem;
+    }
+
+}
+
+
 

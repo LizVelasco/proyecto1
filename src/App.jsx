@@ -12,7 +12,7 @@ import Colecci from './screens/Colecciones';
 import Promo from './screens/Promociones';
 import Home from './screens/Home';
 import Carrito from './screens/Carrito';
-import RegistroAdmin from './components/LoginAdmin'
+import LoginAdmin from './components/LoginAdmin'
 import Dashboard from './screens/Dashboard'
 import Terror from './screens/Terror';
 
@@ -39,7 +39,7 @@ export default function App() {
   return (
   <>
     <Navbar navArrayLinks={navArrayLinks}/>
-    <Container sx={{ mt: 4}}>
+    <Container sx={{ mt: 3.9}}>
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/categoria" element={<Catego />}/>
@@ -47,7 +47,7 @@ export default function App() {
         <Route path="/colecciones" element={<Colecci />}/>
         <Route path="/compras" element={<Carrito />}/>
         <Route path="/terror" element={<Terror />}/>
-        <Route path="/registroAdmin" element={<RegistroAdmin />}/>
+        <Route path="/LoginAdmin" element={<LoginAdmin />}/>
         <Route path="/Admin" element={<Dashboard />}/>
       </Routes>
     </Container>

@@ -1,0 +1,16 @@
+.formulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10rem;
+}
+
+h2{
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+}
+
+.avatar{
+    background-color: #5E90F2;
+}
+

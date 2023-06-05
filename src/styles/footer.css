@@ -135,10 +135,33 @@ hr{
     }
 }
 
-@media screen and (max-width:400px){
+@media (max-width:400px){
     .sb_footer-heading h1{
         font-size: 27px;
         line-height: 38px;
+    }
+
+    .sb_footer-btn p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .sb_footer-below{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sb_footer-below-links{
+        flex-direction: column;
+    }
+
+    .redes{
+        padding-bottom: 0.5rem;
+    }
+
+    .recurso{
+        padding: 0 1px;
+        padding-bottom: 0.5rem;
     }
 }
 

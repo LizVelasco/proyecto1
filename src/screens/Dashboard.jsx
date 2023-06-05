@@ -50,7 +50,7 @@ function Dashboard() {
               <Stack spacing={2}>
                 <Card className='gradientlight'>
                     <Stack spacing={2} direction='row'>
-                      <div className='iconstylev'>
+                      <div className='iconstyle'>
                         <StorefrontIcon/>
                       </div>
                       <div className='paddingall'>
@@ -81,14 +81,14 @@ function Dashboard() {
           <Box height={20} paddingTop={5}>
             <Grid container spacing={2}>
               <Grid item xs={8}>
-                <Card sx={{height: 60 +'vh'}}>
+                <Card sx={{height: 47 +'vh'}}>
                   <CardContent>
                     <Barchart/>
                   </CardContent>
                 </Card>
               </Grid>
               <Grid item xs={4}>
-                <Card sx={{height: 60 +'vh'}}>
+                <Card sx={{height: 100 +'vh'}}>
                   <CardContent>
                       <div className='paddingall'>
                         <span className='pricetitle'>Productos populares</span>

@@ -15,6 +15,7 @@ export const options = {
     title: "Rendimiento de la empresa",
     subtitle: "Ventas, Gastos y Ganancias: 2023",
   },
+  colors: ['#3D79F2', 'rgb(101, 56, 155)', 'rgb(226, 172, 187)'],
 };
 
 export default function Barchart() {
