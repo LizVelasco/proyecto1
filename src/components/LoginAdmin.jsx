@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import FormControl from '@mui/material/FormControl';
 import { InputLabel, Input, FormHelperText, Button, Container, Grid, Box, Avatar, TextField } from '@mui/material';
 import '../styles/LoginAdmin.css'
-import {useNavigate } from 'react-router-dom';
+import {Route, Routes, useNavigate } from 'react-router-dom';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import Dashboard from '../screens/Dashboard'
 
 function LoginAdmin() {
 
@@ -37,7 +38,6 @@ function LoginAdmin() {
         error:true, message:'Email incorrecto',
       })
     }
-    // navigate('/Admin', {replace:true, state:{logged:true}})
   }
 
   const handlePassword =(e)=>{
@@ -52,7 +52,13 @@ function LoginAdmin() {
         error:true, message:'Contraseña incorrecta',
       })
     }
-    // navigate('/Admin', {replace:true, state:{logged:true}})
+  }
+
+  const onLogin=()=>{
+    e.preventDefault();
+    navigate('/Admin', {replace:true, state:{logged:true}})
+
+
   }
 
   
@@ -60,7 +66,7 @@ function LoginAdmin() {
     <>
       <h2>¿Eres el administrador de Librarius?</h2>
       <Avatar className='avatar'><AutoStoriesIcon/></Avatar>
-      <Box component='form' onSubmit={handleSubmit}>
+      <Box component='form' onSubmit={onLogin}>
         <TextField
         id='email'
         label='Email'
@@ -73,6 +79,7 @@ function LoginAdmin() {
         value={email}
         required
         onChange={(e) => setEmail(e.target.value)}
+        onSubmit={handleSubmit}
         />
         <TextField
         id='pwd'
@@ -85,6 +92,7 @@ function LoginAdmin() {
         required
         sx={{mt:3}}
         onChange={(e) => setPassword(e.target.value)}
+        onSubmit={handlePassword}
         />
         <Button type='submit' variant='outlined' sx={{mt:2}}>Ingresar</Button>
       </Box>
